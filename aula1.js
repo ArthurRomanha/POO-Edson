@@ -26,8 +26,12 @@ class Produto{
         console.log(`O produto: ${this.nome} possui ${this.quantidade} unidades`);
     }
     vender(qtd){
-        this.quantidade-=qtd;
-        console.log(`Venda de ${qtd} unidades de ${this.nome} realizada`);
+        if(quantidade>=qtd){
+            this.quantidade-=qtd;
+            console.log(`Venda de ${qtd} unidades de ${this.nome} realizada`);
+        }else{
+            console.log(`Estoque insuficiente para realizar a venda`);
+        }
         this.mostraDados()
 
     }
