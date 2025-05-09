@@ -72,7 +72,7 @@ class ContaBancaria{
         this.verSaldo()
     }
 }
-let ana = new Produto("Ana", 2500);
+let ana = new ContaBancaria("Ana", 2500);
 ana.verSaldo()
 ana.saque(100)
 ana.deposito(200)
