@@ -37,7 +37,7 @@
 //     }
 //     repor(qtd){
 //         this.quantidade+=qtd;
-//         console.log(`Reposição de ${qtd} unidades de ${this.nome} realizada`);
+//         console.log(`eósito de ${qtd} unidades de ${this.nome} realizada`);
 //         this.mostraDados()
 //     }
 // }
@@ -48,3 +48,31 @@
 // maca.repor(20)
 
 // Desafio 3
+class ContaBancaria{
+    constructor(titular, saldo){
+        this.titular = titular
+        this.saldo = saldo
+    }
+    verSaldo(){
+        console.log(`O titular: ${this.titular} possui R$${this.saldo}`);
+    }
+    saque(valor){
+        if(this.saldo>=valor){
+            this.saldo-=valor;
+            console.log(`Saque de R$${valor} realizada`);
+        }else{
+            console.log(`Saldo insuficiente para realizar o Saque`);
+        }
+        this.verSaldo()
+
+    }
+    deposito(valor){
+        this.saldo+=valor;
+        console.log(`Depósito de R$${valor} realizado`);
+        this.verSaldo()
+    }
+}
+let ana = new Produto("Ana", 2500);
+ana.verSaldo()
+ana.saque(100)
+ana.deposito(200)
